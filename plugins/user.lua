@@ -16,11 +16,6 @@ return {
       require("lsp_signature").setup()
     end,
   },
-  {
-    "rest-nvim/rest.nvim",
-    requires = { "nvim-lua/plenary.nvim" }
-  },
-
   -- We also support a key value style plugin definition similar to NvChad:
   -- ["ray-x/lsp_signature.nvim"] = {
   --   event = "BufRead",
@@ -30,12 +25,9 @@ return {
   -- },
   { "rebelot/kanagawa.nvim" },
   { "shortcuts/no-neck-pain.nvim" },
-  { "petertriho/nvim-scrollbar",
-    requires = { "lewis6991/gitsigns.nvim" }
-  },
-  { "kevinhwang91/nvim-hlslens" },
   { "mattn/flappyvird-vim" },
   { "nvim-rogue/rogue.nvim" },
   { "alec-gibson/nvim-tetris" },
+  { "mfussenegger/nvim-jdtls" },
   -- { "lewis6991/gitsigns.nvim" },
 }

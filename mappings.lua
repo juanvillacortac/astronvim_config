@@ -16,7 +16,7 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
 
-    ["<leader>N"] = { "<cmd>NoNeckPain<cr>", desc = "No Neck Pain" },
+    -- ["<leader>N"] = { "<cmd>NoNeckPain<cr>", desc = "No Neck Pain" },
     ["<leader>rr"] = { "<Plug>RestNvim", desc = "Run the request under the cursor" },
     ["<leader>rp"] = { "<Plug>RestNvimPreview", desc = "Preview the cURL command" },
     ["<leader>rl"] = { "<Plug>RestNvimLast", desc = "Re-run the last request" },
