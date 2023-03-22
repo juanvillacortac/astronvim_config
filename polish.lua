@@ -14,4 +14,16 @@ return function()
   --     ["~/%.config/foo/.*"] = "fooscript",
   --   },
   -- }
+  local alpha_on_empty = vim.api.nvim_create_augroup("alpha_on_empty", { clear = true })
+  vim.api.nvim_create_autocmd("User", {
+    pattern = "BDeletePost*",
+    group = alpha_on_empty,
+    callback = function(_)
+      local bufs = vim.fn.getbufinfo { buflisted = true }
+      if require("astronvim.utils").is_available "alpha-nvim" and not bufs[2] then
+        require("neo-tree").close_all()
+        require("alpha").start(true)
+      end
+    end,
+  })
 end
