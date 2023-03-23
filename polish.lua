@@ -19,8 +19,7 @@ return function()
     pattern = "BDeletePost*",
     group = alpha_on_empty,
     callback = function(_)
-      local bufs = vim.fn.getbufinfo { buflisted = true }
-      if require("astronvim.utils").is_available "alpha-nvim" and not bufs[2] then
+      if not require("user.utils").exists_buffers() then
         require("neo-tree").close_all()
         require("alpha").start(true)
       end

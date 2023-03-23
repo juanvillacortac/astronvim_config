@@ -19,6 +19,8 @@ return {
         -- "--- PRAISE THE CODE ---",
         "--- ヴィム ---",
       }
+      local button = require("astronvim.utils").alpha_button
+      table.insert(opts.section.buttons.val, button('LDR S S', '  Load user settings'))
       return opts
     end,
   },

@@ -21,7 +21,10 @@ return {
     ["<leader>rl"] = { "<Plug>RestNvimLast", desc = "Re-run the last request" },
     ["<leader>r"] = { name = "REST client" },
     ["<leader>z"] = { "<cmd>ZenMode<cr>", desc = "Toggle zen mode" },
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>SS"] = { function()
+      require('user.utils').load_user_config_session()
+    end, desc = "Open Neovim user settings" },
+    ["<C-s>"] = { ":w!<cr>", desc = "Save File" }, -- change description but the same command
   },
   t = {
     -- setting a mapping to false will disable it
