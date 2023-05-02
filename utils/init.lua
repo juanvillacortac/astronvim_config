@@ -13,7 +13,7 @@ M.load_user_config_session = function()
   end
   vim.cmd.cd(cfg_path)
   ---@diagnostic disable-next-line: param-type-mismatch
-  local session_name = require("session_manager.utils").dir_to_session_filename(vim.loop.cwd())
+  local session_name = require("session_manager.config").defaults.dir_to_session_filename(vim.loop.cwd())
   if session_name:exists() then
     require("session_manager.utils").load_session(session_name.filename, true)
   else

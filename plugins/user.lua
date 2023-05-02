@@ -27,7 +27,7 @@ return {
   { "shortcuts/no-neck-pain.nvim" },
   { "mattn/flappyvird-vim" },
   { "nvim-rogue/rogue.nvim" },
-  { "alec-gibson/nvim-tetris" },
+  { "alec-gibson/nvim-tetris",    lazy = false },
   { "mfussenegger/nvim-jdtls" },
   -- { "lewis6991/gitsigns.nvim" },
 }
